@@ -1,5 +1,45 @@
 # Running a Guardian Node through Command Line
 
+You can setup a node using either the binary or Docker Engine.
+
+## Install as a Docker Container
+
+* Build the latest node
+
+```console
+docker build -t thetatoken/guardian-node .
+```
+
+* Run a node server providing your password
+
+```console
+$ docker run -ti -e NODE_PASSWORD=123345 theta
+INFO[0000] Log settings: map[*:debug], *:debug
+
+
+ #########################################################
+#                                                         #
+#  _    _      _ _         _______ _          _           #
+#  | |  | |    | | |       |__   __| |        | |         #
+#  | |__| | ___| | | ___      | |  | |__   ___| |_ __ _   #
+#  |  __  |/ _ \ | |/ _ \     | |  | '_ \ / _ \ __/ _` |  #
+#  | |  | |  __/ | | (_) |    | |  | | | |  __/ || (_| |  #
+#  |_|  |_|\___|_|_|\___/     |_|  |_| |_|\___|\__\__,_|  #
+#                                                         #
+#                                                         #
+ #########################################################
+
+
+Version 2.2.1, GitHash 26a6aecf700206bbb616b69d0fc99c880d2f53e0
+Built at Mon Apr 19 18:42:54 UTC 2021
+
+Launching Theta to da moon: 0....
+
+INFO[0013] Allocated cache and file handles, cache: 256, handles: 16  prefix=store
+INFO[0013] Verifying snapshot: /blockchain/mainnet/theta/node/snapshot  prefix=snapshot
+INFO[0013] Allocated cache and file handles, cache: 256, handles: 16  prefix=store
+```
+
 ## Install the guardian node
 
 Please follow the instructions below to download the lastest **Linux** binary and the necessary data. If you prefer to compile from the source code, please follow the steps [here](./COMPILE.md#install-guardian-node-from-source-code). If you are running the node on a Linux server, you'd need to run the node in a **screen or tmux** session, so that after you've logged off, the Theta node can continue to run.
